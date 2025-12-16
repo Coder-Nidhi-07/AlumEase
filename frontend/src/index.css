@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+.underline-on-hover {
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+.underline-on-hover:hover {
+      text-decoration: underline;
+      color : rgb(31, 41, 55)
+    }
+
+    
