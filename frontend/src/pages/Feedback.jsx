@@ -4,7 +4,7 @@ import Sidebar from "../components/Sidebar";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-const BASE_URL = "http://localhost:8000/api/user"; // Backend URL
+const BASE_URL = "https://alumeasebackend.onrender.com/api/user"; // Backend URL
 
 function Feedback() {
   const [message, setMessage] = useState("");

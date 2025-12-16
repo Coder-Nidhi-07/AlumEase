@@ -2,7 +2,7 @@ import axios from "axios";
 
 // Create Axios instance with base URL
 const API = axios.create({
-  baseURL: "http://localhost:8000/api", // your backend URL
+  baseURL: "https://alumeasebackend.onrender.com/api", // your backend URL
 });
 
 // ✅ Attach JWT token automatically to every request
