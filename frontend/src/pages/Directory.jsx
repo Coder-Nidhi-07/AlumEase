@@ -44,12 +44,16 @@ function Directory() {
       result = result.filter((a) => a.batch === selectedBatch);
     }
 
+    // if (selectedCourse) {
+    //   result = result.filter(
+    //     (a) =>
+    //       Array.isArray(a.courses) &&
+    //       a.courses.some((c) => c === selectedCourse)
+    //   );
+    // }
+
     if (selectedCourse) {
-      result = result.filter(
-        (a) =>
-          Array.isArray(a.courses) &&
-          a.courses.some((c) => c === selectedCourse)
-      );
+      result = result.filter((a) => a.degree === selectedCourse);
     }
 
     if (search.trim()) {
@@ -120,7 +124,8 @@ function Directory() {
               }`}
               onClick={() => setShowFilter((prev) => !prev)}
             >
-              Filter Options ({selectedBatch || selectedCourse ? "Active" : "All"})
+              Filter Options (
+              {selectedBatch || selectedCourse ? "Active" : "All"})
             </button>
 
             {/* Filters */}
@@ -169,7 +174,7 @@ function Directory() {
 
               {/* Course */}
               <div className="mt-2">
-                <p className="font-semibold mb-1">Filter by Course</p>
+                <p className="font-semibold mb-1">Filter by Degree</p>
                 <div className="flex flex-wrap gap-1.5">
                   <button
                     onClick={() => setSelectedCourse("")}
